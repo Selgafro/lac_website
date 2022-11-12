@@ -99,7 +99,7 @@ The Header for all pages
 */
 nav{
   background-color: var(--nav-background-color);
-  padding: 5px 20px;
+  padding: 5px 30px;
   display: flex;
   align-items: center;
 }
@@ -107,8 +107,9 @@ nav a{
   color: var(--nav-link-color);
 }
 nav a:hover{
-  background-color: var(--nav-hover-background-color);
-  color: var(--nav-hover-link-color);
+  color: var(--accent2-color);
+  text-decoration: underline;
+  font-weight: bold;
 }
 .logo{
   flex: 1;
@@ -121,11 +122,15 @@ nav a:hover{
   font-size: 1.25rem;
 }
 .logo a:hover{
+  text-decoration: none;
   color: var(--nav-hover-link-color);
+  font-weight: normal;
 }
 .menu{
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  gap: 10px;
 }
 .menu a{
   padding: 15px 10px;
@@ -192,4 +197,15 @@ main{
 .home-banner p{
   font-size: 1.5rem;
   margin: 0 20%;
+}
+@media screen and (max-width: 960px) {
+  .home-banner{
+    height: 50vh;
+  }
+  .home-banner h3{
+    font-size: 8vh;
+  }
+  .home-banner p{
+    font-size: 3vh;
+  }
 }
