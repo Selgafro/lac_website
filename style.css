@@ -80,6 +80,9 @@ a,li{text-decoration: none;}
 h1, h2, h3, h4, h5, h6{
   font-weight: bold;
 }
+a, a:hover{
+  text-decoration: none;
+}
 .btn{
   padding: 10px;
   border-radius: 3px;
@@ -94,49 +97,67 @@ h1, h2, h3, h4, h5, h6{
 The Header for all pages
 ========================================================
 */
-.heading{
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
+nav{
   background-color: var(--nav-background-color);
-}
-.logo h1{
-  margin-left: 50px;
-  border: 3px solid #1088f9;
-  margin-bottom: 0;
-  text-align: center;
-  font-weight: 200;
-  font-size: 1.25rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  padding: 10px;
-  text-decoration: none;
-}
-.logo h1 a{
-  color: white;
-}
-.heading nav{
-  margin-right: auto;
-  width: 100%;
-  max-width: 960px;
+  padding: 5px 20px;
   display: flex;
-  float: right;
-  gap: 1em'
+  align-items: center;
 }
-.heading nav a{
-  padding: 15px;
+nav a{
   color: var(--nav-link-color);
-  text-align: center;
 }
-.heading nav a:hover{
+nav a:hover{
   background-color: var(--nav-hover-background-color);
   color: var(--nav-hover-link-color);
 }
-.heading nav a:active{
-  text-decoration: underline;
+.logo{
+  flex: 1;
+  text-align: center;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+.logo a{
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+.logo a:hover{
+  color: var(--nav-hover-link-color);
+}
+.menu{
+  display: flex;
+  align-items: center;
+}
+.menu a{
+  padding: 15px 10px;
+  font-size: 1.1rem;
+}
+.toggle{
+  font-size: 30px;
+  display: none;
 }
 
+@media screen and (max-width: 960px){
+  nav{
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+  }
+  nav a{
+    display: block;
+  }
+  .menu{
+    margin-top: 15px;
+    display: none;
+  }
+  .menu.active, .toggle{
+    display: block;
+  }
+  .toggle{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
 /* =====================================================
 The Home page
 ========================================================
