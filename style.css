@@ -61,6 +61,8 @@ Here is the root Style
     --heading-font: Poppins;
     --paragraph-font: "Open Sans", sans-serif, Helvetica;
 
+    --heading-font-size: 16px;
+
     --heading-color-in-white: black;
     --headline-color-on-color: #001f54;
     --paragraph-color-on-white: black;
@@ -74,7 +76,7 @@ Here is the root Style
 *{
   box-sizing: border-box;
 }
-body{box-sizing: border-box;background-color: #fefcfb;padding: 0;font-family: var(--paragraph-font);line-height: 1.25;}
+body{box-sizing: border-box;font-size: 16px; background-color: #fefcfb;padding: 0;font-family: var(--paragraph-font);line-height: 1.25;}
 #container{box-sizing: border-box;margin: 0 auto;}
 a,li{text-decoration: none;}
 h1, h2, h3, h4, h5, h6{
@@ -99,48 +101,34 @@ The Header for all pages
 */
 nav{
   background-color: var(--nav-background-color);
-  padding: 5px 30px;
   display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 10rem;
   align-items: center;
 }
 nav a{
   color: var(--nav-link-color);
+  padding: 10px;
 }
 nav a:hover{
-  color: var(--accent2-color);
-  text-decoration: underline;
-  font-weight: bold;
-}
-.logo{
-  flex: 1;
-  text-align: center;
-  font-family: Impact, 'Arial Narrow Bold', sans-serif;
-}
-.logo a{
-  display: flex;
-  align-items: center;
-  font-size: 1.25rem;
-}
-.logo a:hover{
-  text-decoration: none;
   color: var(--nav-hover-link-color);
-  font-weight: normal;
+  font-weight: bold;
+  background-color: var(--nav-hover-background-color);
+  transition: 0.3s;
 }
 .menu{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 10px;
-}
-.menu a{
-  padding: 15px 10px;
-  font-size: 1.1rem;
+  gap: 0 10px;
 }
 .toggle{
   font-size: 30px;
   display: none;
 }
-
+.logo a:hover{
+  background-color: #1088f9;
+}
 @media screen and (max-width: 960px){
   nav{
     display: block;
@@ -191,7 +179,7 @@ main{
   gap: 20px;
 }
 .home-banner h3{
-  font-size: 3.5rem;
+  font-size: 5vw;
   margin: 0 10%;
 }
 .home-banner p{
