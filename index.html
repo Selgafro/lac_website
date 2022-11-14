@@ -7,10 +7,10 @@
     <title>Accueil - Les Anges du Ciel</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-    <div id="container">
         <!-- Defining the header -->
         <nav>
             <div class="logo">
@@ -41,20 +41,30 @@
             })
         </script>
         
-        <main class="content">
+        <main class="conntent">
             <div class="home-banner">
-                <h3>Bonne éducation, bons fruits</h3>
+                <h1>Bonne éducation, bons fruits</h1>
                 <p>Si vous voulez faire grandir votre enfant avec une morale
                     tellement satisfaite, amenez-le chez nous.
                 </p>
                 <h4 class="btn">Inscription</h4>
             </div>
-            <section>
-                <div>
+            <div class="container">
+                <section class="home-section">
+                    <div class="about-school">
+                        <!-- The about section is here down-->
+                        <h2>À propos de notre école</h2>
+                        <p>Le Complexe Scolaire Les Anges du Ciel est une école de l'Institut des Soeurs de Saint Joseph, une école catholique privée
+                            ouvert pour tout public à la recherche d'une bonne éducation pour son enfant.</p>
+                        <p>Il a commencé depuis 2006 comme une école publique, au nom de l'EP Anges, sous la direction de la Soeur Giancarla Buongaronni
+                            et a évolué. Nous comptons déjà +17 ans d'oeuvre.</p>
+                        <p>Aujourd'hui, il est organisé en 3 cycles, à savoir: <span style="font-weight: bold;">Maternelle, Primaire, Secondaire.</span></p>
+                        <p>Quoi qu'il soit une école privée, il fait tout pour respecter le programme national élaboré par le gouvernement congolais.</p>
+                    </div>
+    
+                </section>
+            </div>
 
-                </div>
-
-            </section>
         </main>
         <footer>
             <div class="politics">
@@ -64,10 +74,20 @@
                 <a href="contact.html">Contact</a>
             </div>
             <div class="adress">
-                <p>Adresse <span>N°</span></p>
+                <p><small>Adresse <span>N°09, Av. Du Plage, Quartier Nyamianda, Uvira, Sud-Kivu, République Démocratique du Congo</span></small></p>
             </div>
-            <div class="copyright"><small>&copy; 2022 Les Anges du Ciel</small></div>
+            <div class="flexed">
+                <div class="copyright"><small>&copy; 2022 Les Anges du Ciel</small></div>
+                <div class="designer"><small>Designed by <a href="https://www.linkedin.com/in/selemani-fran%C3%A7ois-6a1530197/">Francois Selemani</a> </small></div>
+                <div class="social">
+                    <a href="https://www.linkedin.com"><ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon><span class="sr-only">LInkedIn</span></a>
+                    <a href="https://www.facebook.com"><ion-icon name="logo-facebook" aria-hidden="true"></ion-icon><span class="sr-only">Facebook</span></a>
+                    <a href="https://www.instagram.com"><ion-icon name="logo-instagram" aria-hidden="true"></ion-icon><span class="sr-only">Instagram</span></a>
+                    <a href="https://www.twitter.com"><ion-icon name="logo-twitter" aria-hidden="true"></ion-icon><span class="sr-only">Twitter</span></a>
+                    <a href="https://www.pinterest.com"><ion-icon name="logo-pinterest" aria-hidden="true"></ion-icon><span class="sr-only">Pinterest</span></a>
+                </div>
+            </div>
+            
         </footer>
-    </div>
 </body>
 </html>

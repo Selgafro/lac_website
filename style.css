@@ -76,14 +76,30 @@ Here is the root Style
 *{
   box-sizing: border-box;
 }
-body{box-sizing: border-box;font-size: 16px; background-color: #fefcfb;padding: 0;font-family: var(--paragraph-font);line-height: 1.25;}
-#container{box-sizing: border-box;margin: 0 auto;}
+body{font-size: 18px; background-color: #fefcfb;padding: 0;font-family: var(--paragraph-font);line-height: 1.75;}
+.container{margin: 0 auto; max-width: 900px;}
 a,li{text-decoration: none;}
 h1, h2, h3, h4, h5, h6{
   font-weight: bold;
+  margin: 10px 10px 10px 0;
+}
+h1{
+  font-size: 35px;
+  color: white;
+}
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 25px;
+}
+h4{
+  font-size: 20px;
 }
 a, a:hover{
   text-decoration: none;
+  color: black;
+  transition: 0.3s;
 }
 .btn{
   padding: 10px;
@@ -92,7 +108,6 @@ a, a:hover{
   background-color: var(--nav-background-color);
 }
 .btn:hover{
-  border: 1px solid #001f54;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 /* =====================================================
@@ -103,7 +118,7 @@ nav{
   background-color: var(--nav-background-color);
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 10rem;
+  padding: 0.5rem 5rem;
   align-items: center;
 }
 nav a{
@@ -178,7 +193,7 @@ main{
   text-align: center;
   gap: 20px;
 }
-.home-banner h3{
+.home-banner h1{
   font-size: 5vw;
   margin: 0 10%;
 }
@@ -190,10 +205,78 @@ main{
   .home-banner{
     height: 50vh;
   }
-  .home-banner h3{
+  .home-banner h1{
     font-size: 8vh;
   }
   .home-banner p{
     font-size: 3vh;
   }
+}
+
+/** 
+Styling the true main
+**/
+.home-section{
+  padding: 0 15px;
+}
+/* Styling the footer
+
+*/
+footer{
+  background-color: #808B96;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+footer [class="politics"]{
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px white solid;
+}
+footer [class="politics"] a{
+  display: block;
+  gap: 10px;
+  padding: 10px;
+}
+footer [class="politics"] a:hover{
+  color: white;
+  transition: 0.3s;
+  border-top: 1px solid #EAECEE;
+  border-right: 1px solid #EAECEE;
+  border-left: 1px solid #EAECEE;
+  border-radius: 5px;
+}
+footer [class="adress"]{
+  margin-top: 2rem;
+}
+footer div p small, small{
+  font-size: 13px;
+}
+.flexed{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  align-items: center;
+}
+.copyright{
+  grid-column: 1 / 2;
+}
+.designer{
+  grid-column: 2 / 3;
+}
+.social{
+  grid-column: 3 / 4;
+  justify-self: end;
+  font-size: 1rem;
+}
+footer ion-icon{
+  color: white;
+}
+footer ion-icon:hover{
+  color: var(--accent2-color);
 }
