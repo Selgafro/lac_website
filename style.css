@@ -141,9 +141,7 @@ nav a:hover{
   font-size: 30px;
   display: none;
 }
-.logo a:hover{
-  background-color: #1088f9;
-}
+
 @media screen and (max-width: 960px){
   nav{
     display: block;
