@@ -4,75 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La meilleure école à Uvira" />
     <title>Accueil - Les Anges du Ciel</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-</head>
+ </head>
 <body>
         <!-- Defining the header -->
-        <nav>
+    <div class="container">
+        <header class="header">
             <div class="logo">
-                <a href="index.html"><img src="images/image.png" alt="LAC logo" height="50"></a>
+                <a href="index.html"><img src="images/image.png" alt="Les Anges du Ciel logo" />
+                </a>
             </div>
-            <div class="toggle"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></div>
-            <div  class="menu">
-                <a href="index.html" class="bordered">Accueil</a>
+            <nav>
+                <a href="index.html">Accueil</a>
                 <a href="about-us.html">A propos de nous</a>
                 <a href="admission.html">Admission</a>
-                <a href="activites.html" class="bordered">Nos Activités</a>
+                <a href="activites.html">Nos Activités</a>
                 <a href="gallery.html">Gallérie</a>
                 <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script>
-            $(function(){
-                $(".toggle").on("click", function(){
-                    if($(".menu").hasClass("active")){
-                        $(".menu").removeClass("active");
-                        $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-                    } else{
-                        $(".menu").addClass("active");
-                        $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
-                    }
-                });
-            })
-        </script>
-        
-        <main class="conntent">
+            </nav>
+        </header>
+        <main class="content">
             <div class="home-banner">
-                <h1>Bonne éducation, bons fruits</h1>
-                <p>Si vous voulez faire grandir votre enfant avec une morale
-                    tellement satisfaite, amenez-le chez nous.
-                </p>
-                <h4 class="btn">Inscription</h4>
+                <div class="banner-text">
+                    <h1>Expérimentez le nouveau système d'enseignement</h1>
+                    <p>Si vous voulez faire grandir votre enfant avec une morale
+                            tellement satisfaite, amenez-le chez nous.
+                        </p>
+                    <h4 class="btn"><a href="inscription.html">Inscription</a></h4>
+                </div>
+                <div class="banner-image">
+                    <img src="images/home-image1.jpg" alt="">
+                </div>
             </div>
-            <div class="container">
-                <section class="home-section">
-                    <div class="about-school">
-                        <!-- The about section is here down-->
-                        <h2>À propos de notre école</h2>
-                        <p>Le Complexe Scolaire Les Anges du Ciel est une école de l'Institut des Soeurs de Saint Joseph, une école catholique privée
+                <div class="about-school">
+                    <!-- The about section is here down-->
+                    <h2>À propos de notre école</h2>
+                    <p>Le Complexe Scolaire Les Anges du Ciel est une école de l'Institut des Soeurs de Saint Joseph, une école catholique privée
                             ouvert pour tout public à la recherche d'une bonne éducation pour son enfant.</p>
-                        <p>Il a commencé depuis 2006 comme une école publique, au nom de l'EP Anges, sous la direction de la Soeur Giancarla Buongaronni
+                    <p>Il a commencé depuis 2006 comme une école publique, au nom de l'EP Anges, sous la direction de la Soeur Giancarla Buongaronni
                             et a évolué. Nous comptons déjà +17 ans d'oeuvre.</p>
-                        <p>Aujourd'hui, il est organisé en 3 cycles, à savoir: <span style="font-weight: bold;">Maternelle, Primaire, Secondaire.</span></p>
-                        <p>Quoi qu'il soit une école privée, il fait tout pour respecter le programme national élaboré par le gouvernement congolais.</p>
-                    </div>
-    
-                </section>
+                    <p>Aujourd'hui, il est organisé en 3 cycles, à savoir: <span style="font-weight: bold;">Maternelle, Primaire, Secondaire.</span></p>
+                    <p>Quoi qu'il soit une école privée, il fait tout pour respecter le programme national élaboré par le gouvernement congolais.</p>
+                </div>
             </div>
-
+    
         </main>
         <footer>
-            <div class="politics">
+            <nav class="politics">
                 <a href="about-us.html">A propos de nous</a>
                 <a href="conditions.html">Conditions d'utilisation</a>
                 <a href="privacy.html">Politiques de confidentialité</a>
                 <a href="contact.html">Contact</a>
-            </div>
+            </nav>
             <div class="adress">
                 <p><small>Adresse <span>N°09, Av. Du Plage, Quartier Nyamianda, Uvira, Sud-Kivu, République Démocratique du Congo</span></small></p>
             </div>
@@ -86,8 +72,8 @@
                     <a href="https://www.twitter.com"><ion-icon name="logo-twitter" aria-hidden="true"></ion-icon><span class="sr-only">Twitter</span></a>
                     <a href="https://www.pinterest.com"><ion-icon name="logo-pinterest" aria-hidden="true"></ion-icon><span class="sr-only">Pinterest</span></a>
                 </div>
-            </div>
-            
+            </div>  
         </footer>
+    </div>  
 </body>
 </html>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Epilogue:wght@400;500;600;700;800&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
 */
@@ -53,163 +52,135 @@ Here is the root Style
 ========================================================
 */
 :root{
-    --primary-color: #001f54;
-    --second-color: #1088f9;
-    --accent1-color: #0a1128;
-    --accent2-color: #35c2e9;
+    --primary-color: #1da2e4;
+    --second-color: #0353a4;
+    --accent1-color: #061a40;
+    --accent2-color: #b6d6f2;
+    --white-color: #f9fbfc;
 
-    --heading-font: Poppins;
-    --paragraph-font: "Open Sans", sans-serif, Helvetica;
-
-    --heading-font-size: 16px;
+    --heading-font: 'Epilogue', sans-serif;
+    --paragraph-font: 'DM Sans', sans-serif;
 
     --heading-color-in-white: black;
     --headline-color-on-color: #001f54;
     --paragraph-color-on-white: black;
-    --paragraph-color-on-color: #fefcfb;
+    --paragraph-color-on-color: #f9fbfc;
     --paragraph-background-color: #0a1128;
-    --nav-link-color: #fefcfb;
-    --nav-background-color: #1088f9;
-    --nav-hover-link-color: #fefcfb;
-    --nav-hover-background-color: #001f54;
+    --nav-link-color: #1da2e4;
+    --nav-background-color: #f9fbfc;
+    --nav-hover-link-color: #0353a4;
+    --nav-hover-background-color: #b6d6f2;
 }
-*{
+*,
+::before,
+::after{
   box-sizing: border-box;
 }
-body{font-size: 18px; background-color: #fefcfb;padding: 0;font-family: var(--paragraph-font);line-height: 1.75;}
-.container{margin: 0 auto; max-width: 900px;}
-a,li{text-decoration: none;}
+html{
+  font-size: 16px;
+}
+body{font-size: calc(.5rem + 1.5vw); background-color: #fff;padding: 0;font-family: var(--paragraph-font);line-height: 1.5;}
+.content{max-width: 76.25rem; margin: 0 auto;padding-top: 6rem;}
+a,li{text-decoration: none;color: #000;}
 h1, h2, h3, h4, h5, h6{
-  font-weight: bold;
-  margin: 10px 10px 10px 0;
+  font-family: var(--heading-font);
+  letter-spacing: .5px;
 }
 h1{
-  font-size: 35px;
-  color: white;
+  font-weight: 800;
+  font-size: 2.1875rem;
 }
-h2{
-  font-size: 30px;
+p{
+  font-size: 1.125rem;
 }
-h3{
-  font-size: 25px;
-}
-h4{
-  font-size: 20px;
-}
-a, a:hover{
-  text-decoration: none;
-  color: black;
-  transition: 0.3s;
+img{
+  width: 100%;
 }
 .btn{
-  padding: 10px;
-  border-radius: 3px;
-  border: 1px solid #1088f9;
-  background-color: var(--nav-background-color);
+  padding: .5rem;
+  background-color: var(--nav-hover-link-color);
+  color: var(--nav-background-color);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50rem;
 }
-.btn:hover{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.btn a{
+  color: white;
 }
 /* =====================================================
 The Header for all pages
 ========================================================
 */
-nav{
+header{
+  height: 50px;
+  padding: 5rem 0 4rem;
+  position: fixed;
+  top: 0;
   background-color: var(--nav-background-color);
+}
+.header{
+  padding: 0 calc(100vw - 81.5rem);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 5rem;
+  flex-direction: row;
   align-items: center;
+  width: 100%;
+}
+.logo{
+  height: 3.125rem;
+  width: 3.125rem;
+}
+.header nav{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
 }
 nav a{
+  font-size: calc(2rem - 1vw);
+}
+.header nav a{
   color: var(--nav-link-color);
-  padding: 10px;
 }
-nav a:hover{
-  color: var(--nav-hover-link-color);
-  font-weight: bold;
-  background-color: var(--nav-hover-background-color);
-  transition: 0.3s;
-}
-.menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 0 10px;
-}
-.toggle{
-  font-size: 30px;
-  display: none;
+.header nav a:hover{
+  text-decoration: underline;
 }
 
-@media screen and (max-width: 960px){
-  nav{
-    display: block;
-    position: relative;
-    padding: 15px 20px;
-  }
-  nav a{
-    display: block;
-  }
-  .menu{
-    margin-top: 15px;
-    display: none;
-  }
-  .menu.active, .toggle{
-    display: block;
-  }
-  .toggle{
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
-}
 /* =====================================================
 The Home page
 ========================================================
 */
-
+.home-banner{
+  background: radial-gradient(circle at top left,rgba(255, 255, 255, 0.5), transparent 100px),
+              radial-gradient(circle at top right,rgba(255, 255, 255, 0.5), transparent 100px),
+              radial-gradient(at bottom left,rgba(255, 0, 255, 0.5), transparent 400px),
+              radial-gradient(at bottom right,rgba(255, 100, 100, 0.5), transparent 400px);  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8rem;
+  width: 100%;
+}
+.banner-text{
+  max-width: 50vw;
+  align-self: flex-end;
+}
+.banner-text h1{
+  font-size: 3.75rem;
+}
+.banner-image{
+  justify-self: flex-end;
+}
+.banner-text .btn{
+  max-width: 20rem;
+  margin: 2rem auto;
+  font-size: calc(2rem - 1vw);
+}
 /* =============
 Content
 */
-main{
-  margin: 0 2px;
-}
-.home-banner{
-  background: linear-gradient(90deg, rgba(8, 114, 133, 0.7) 0%, rgba(8, 114, 133, 0.7)), url(images/home-banner.png);
-  position: relative;
-  background-position: top;
-  background-size: 100%;
-  height: 78vh;
-  background-repeat: no-repeat;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  gap: 20px;
-}
-.home-banner h1{
-  font-size: 5vw;
-  margin: 0 10%;
-}
-.home-banner p{
-  font-size: 1.5rem;
-  margin: 0 20%;
-}
-@media screen and (max-width: 960px) {
-  .home-banner{
-    height: 50vh;
-  }
-  .home-banner h1{
-    font-size: 8vh;
-  }
-  .home-banner p{
-    font-size: 3vh;
-  }
-}
+
 
 /** 
 Styling the true main
