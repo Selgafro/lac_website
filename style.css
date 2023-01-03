@@ -1,251 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Epilogue:wght@400;500;600;700;800&display=swap');
-/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
-  License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center, 
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* =====================================================
-Here is the root Style
-========================================================
-*/
-:root{
-    --primary-color: #1da2e4;
-    --second-color: #0353a4;
-    --accent1-color: #061a40;
-    --accent2-color: #b6d6f2;
-    --white-color: #f9fbfc;
-
-    --heading-font: 'Epilogue', sans-serif;
-    --paragraph-font: 'DM Sans', sans-serif;
-
-    --heading-color-in-white: black;
-    --headline-color-on-color: #001f54;
-    --paragraph-color-on-white: black;
-    --paragraph-color-on-color: #f9fbfc;
-    --paragraph-background-color: #0a1128;
-    --nav-link-color: #1da2e4;
-    --nav-background-color: #f9fbfc;
-    --nav-hover-link-color: #0353a4;
-    --nav-hover-background-color: #b6d6f2;
-}
-*,
-::before,
-::after{
-  box-sizing: border-box;
-}
-html{
-  font-size: 16px;
-}
-body{font-size: calc(.5rem + 1.5vw); background-color: #fff;padding: 0;font-family: var(--paragraph-font);line-height: 1.5;}
-.content{max-width: 76.25rem; margin: 0 auto;padding-top: 6rem;}
-a,li{text-decoration: none;color: #000;}
-h1, h2, h3, h4, h5, h6{
-  font-family: var(--heading-font);
-  letter-spacing: .5px;
-}
-h1{
-  font-weight: 800;
-  font-size: 2.1875rem;
-}
-p{
+body{
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.125rem;
 }
-img{
-  width: 100%;
+
+h1{
+  font-size: 4.5rem;
+  font-weight: 700;
 }
-.btn{
-  padding: .5rem;
-  background-color: var(--nav-hover-link-color);
-  color: var(--nav-background-color);
-  cursor: pointer;
-  text-align: center;
-  border-radius: 50rem;
+h2{
+  font-size: 3rem;
+  font-weight: 600;
 }
-.btn a{
-  color: white;
+div .home-banner{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
-/* =====================================================
-The Header for all pages
-========================================================
-*/
-header{
-  height: 50px;
-  padding: 5rem 0 4rem;
-  position: fixed;
-  top: 0;
-  background-color: var(--nav-background-color);
-}
-.header{
-  padding: 0 calc(100vw - 81.5rem);
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-}
-.logo{
-  height: 3.125rem;
-  width: 3.125rem;
-}
-.header nav{
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  gap: 1.25rem;
-}
-nav a{
-  font-size: calc(2rem - 1vw);
-}
-.header nav a{
-  color: var(--nav-link-color);
-}
-.header nav a:hover{
-  text-decoration: underline;
+.about-school, section .testimonies{
+  background-color: #f5fffa;
 }
 
-/* =====================================================
-The Home page
-========================================================
-*/
-.home-banner{
-  background: radial-gradient(circle at top left,rgba(255, 255, 255, 0.5), transparent 100px),
-              radial-gradient(circle at top right,rgba(255, 255, 255, 0.5), transparent 100px),
-              radial-gradient(at bottom left,rgba(255, 0, 255, 0.5), transparent 400px),
-              radial-gradient(at bottom right,rgba(255, 100, 100, 0.5), transparent 400px);  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 8rem;
-  width: 100%;
-}
-.banner-text{
-  max-width: 50vw;
-  align-self: flex-end;
-}
-.banner-text h1{
-  font-size: 3.75rem;
-}
-.banner-image{
-  justify-self: flex-end;
-}
-.banner-text .btn{
-  max-width: 20rem;
-  margin: 2rem auto;
-  font-size: calc(2rem - 1vw);
-}
-/* =============
-Content
-*/
-
-
-/** 
-Styling the true main
-**/
-.home-section{
-  padding: 0 15px;
-}
-/* Styling the footer
-
-*/
 footer{
-  background-color: #808B96;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  margin-top: 10px;
-  align-items: center;
-  justify-content: center;
+  background-color: #dcdcdc;
 }
-footer [class="politics"]{
-  display: flex;
-  gap: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px white solid;
+
+footer a{
+  text-decoration: none;
+  color: inherit;
 }
-footer [class="politics"] a{
-  display: block;
-  gap: 10px;
-  padding: 10px;
+
+section .bg-custom{
+  background-color: #f5fffa ;
 }
-footer [class="politics"] a:hover{
-  color: white;
-  transition: 0.3s;
-  border-top: 1px solid #EAECEE;
-  border-right: 1px solid #EAECEE;
-  border-left: 1px solid #EAECEE;
-  border-radius: 5px;
-}
-footer [class="adress"]{
-  margin-top: 2rem;
-}
-footer div p small, small{
-  font-size: 13px;
-}
-.flexed{
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-evenly;
-  align-items: center;
-}
-.copyright{
-  grid-column: 1 / 2;
-}
-.designer{
-  grid-column: 2 / 3;
-}
-.social{
-  grid-column: 3 / 4;
-  justify-self: end;
-  font-size: 1rem;
-}
-footer ion-icon{
-  color: white;
-}
-footer ion-icon:hover{
-  color: var(--accent2-color);
+.carousel-item{
+  padding: 0 8rem;
 }
