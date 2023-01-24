@@ -22,8 +22,11 @@ div .home-banner{
 
 footer{
   background-color: #dcdcdc;
+  font-size: .8rem;
 }
-
+footer h3{
+  font-size: 1.3rem;
+}
 footer a{
   text-decoration: none;
   color: inherit;
@@ -32,6 +35,23 @@ footer a{
 section .bg-custom{
   background-color: #f5fffa ;
 }
-.carousel-item{
-  padding: 0 8rem;
+.reveal{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.reveal.scroll-active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+div>.bg-green{
+  background-color: green;
+}
+div>.text-green{
+  color: green;
+}
+div.socials{
+  font-size: 1.2rem;
 }
