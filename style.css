@@ -6,7 +6,7 @@ body{
 }
 
 h1{
-  font-size: 4.5rem;
+  font-size: 5vw;
   font-weight: 700;
 }
 h2{
@@ -54,4 +54,25 @@ div>.text-green{
 }
 div.socials{
   font-size: 1.2rem;
+}
+
+/** The Ordered articles customized here **/
+ol.ordered-list::has(li){
+  list-style: none;
+  counter-reset: num;
+}
+ol.ordered-list::has(li) li{
+  counter-increment: num;
+
+}
+ol.ordered-list::has(li) li::before{
+  content: "Art " counter(num) ". ";
+  font-weight: bold;
+  color: rgb(24, 23, 23);
+}
+ol.ordered-list > li{
+  padding-bottom: .4rem;
+}
+li > a {
+  text-decoration: none;
 }
